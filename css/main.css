@@ -1,0 +1,134 @@
+:root {
+  --ease: cubic-bezier(0.29, 0.57, 0.12, 0.99);
+  --duration: .6s;
+  --size: 800px;
+  --scaleMask: 1;
+  --scaleBtn: 1;
+}
+@media (max-width: 900px) {
+  :root {
+    --size: 600px;
+    --scaleMask: .75;
+    --scaleBtn: .8;
+  }
+}
+@media (max-width: 700px) {
+  :root {
+    --size: 400px;
+    --scaleMask: .5;
+    --scaleBtn: .7;
+  }
+}
+@media (max-width: 500px) {
+  :root {
+    --size: 300px;
+    --scaleMask: .375;
+    --scaleBtn: .6;
+  }
+}
+
+.about {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 726px;
+  background-color: #283f38;
+  color: #fff;
+}
+.about div {
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #cabbab;
+}
+.about div.left {
+  left: 10%;
+  top: 60%;
+}
+.about div.left ul {
+  font-size: 120px;
+  padding: 10px;
+  font-weight: bold;
+  line-height: 150px;
+}
+.about div.left ul li {
+  display: flex;
+  font-size: 25px;
+  line-height: 30px;
+}
+.about div.left ul li em {
+  margin-right: 10px;
+}
+.about div.right {
+  right: 10%;
+}
+.about div.right .img_container {
+  padding-bottom: 100%;
+  position: relative;
+}
+.about div.right .img_container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about div.right .click {
+  z-index: 1;
+  width: 600px;
+  height: 600px;
+}
+.about div.right .click.active {
+  position: absolute;
+  z-index: 10;
+  top: 105%;
+  right: -8%;
+  transform: rotate(20deg) scale(1);
+  transition: transform 0.2s;
+  width: 120px;
+  height: 120px;
+  background: #cabbab;
+  box-shadow: 0 10px 20px -6px #cabbab;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+}
+.about div.right .click.active:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: scale(1.2);
+  transition: transform 0.4s;
+}
+.about div.right .click.active:hover:before {
+  transform: scale(1);
+}
+.about div.right .click.active:active {
+  transform: scale(0.9) rotate(0deg);
+}
+
+.work {
+  height: 1000px;
+  width: 100%;
+  background-color: #f3ddb6;
+}
+
+.contact {
+  background-color: #cabbab;
+  height: 300px;
+}

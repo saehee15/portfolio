@@ -1,0 +1,59 @@
+@import './variables';
+
+@import url('./reset.css');
+
+
+
+header {
+    color: #fff;
+    
+    .logo {
+        position: fixed;
+        top: 45px;
+        left: 45px;
+        z-index: 10;
+    }
+
+    .meun {
+        position: fixed;
+        top: 45px;
+        right: 45px;
+        display: flex;
+        z-index: 10;
+
+        li{
+           width: 50px;
+        }
+    }
+    &.hide{
+        display: none;
+    }
+}
+
+footer{
+    .up_btn{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 40px;
+        bottom: 40px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 10;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s ,visibility 0s .4s;
+
+        img{
+            width: 35px;
+            margin-bottom: 10px;
+        }
+
+        &.on{
+            opacity: 1;
+        visibility: visible;
+        }
+    }
+}
