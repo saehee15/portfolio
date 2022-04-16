@@ -22,6 +22,21 @@ header.hide {
   display: none;
 }
 
+footer .contact {
+  background-color: #cabbab;
+  color: #283f38;
+  position: relative;
+  padding: 8%;
+}
+footer .contact h2 {
+  font-size: 100px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+footer .contact .info {
+  font-size: 25px;
+  line-height: 1.7;
+}
 footer .up_btn {
   display: flex;
   flex-direction: column;

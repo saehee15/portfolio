@@ -1,3 +1,7 @@
+.txt_hide {
+  overflow: hidden;
+}
+
 :root {
   --ease: cubic-bezier(0.29, 0.57, 0.12, 0.99);
   --duration: .6s;
@@ -34,41 +38,46 @@
   height: 726px;
   background-color: #283f38;
   color: #fff;
+  position: relative;
 }
-.about div {
+.about .left {
+  left: 10%;
+  top: 60%;
   width: 500px;
-  height: 300px;
+  height: auto;
   position: absolute;
-  top: 50%;
   transform: translateY(-50%);
   background-color: #cabbab;
 }
-.about div.left {
-  left: 10%;
-  top: 60%;
-}
-.about div.left ul {
-  font-size: 120px;
+.about .left ul {
+  font-size: 80px;
   padding: 10px;
   font-weight: bold;
   line-height: 150px;
 }
-.about div.left ul li {
+.about .left ul li {
   display: flex;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 40px;
 }
-.about div.left ul li em {
+.about .left ul li em {
   margin-right: 10px;
+  width: 200px;
 }
-.about div.right {
+.about .right {
   right: 10%;
+  width: 500px;
+  height: 300px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: #cabbab;
 }
-.about div.right .img_container {
+.about .right .img_container {
   padding-bottom: 100%;
   position: relative;
 }
-.about div.right .img_container img {
+.about .right .img_container img {
   position: absolute;
   top: 0;
   left: 0;
@@ -77,15 +86,15 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about div.right .click {
+.about .right .click {
   z-index: 1;
   width: 600px;
   height: 600px;
 }
-.about div.right .click.active {
+.about .right .click.active {
   position: absolute;
   z-index: 10;
-  top: 105%;
+  top: 130%;
   right: -8%;
   transform: rotate(20deg) scale(1);
   transition: transform 0.2s;
@@ -102,7 +111,7 @@
   cursor: pointer;
   overflow: hidden;
 }
-.about div.right .click.active:before {
+.about .right .click.active:before {
   content: "";
   position: absolute;
   z-index: 2;
@@ -115,10 +124,10 @@
   transform: scale(1.2);
   transition: transform 0.4s;
 }
-.about div.right .click.active:hover:before {
+.about .right .click.active:hover:before {
   transform: scale(1);
 }
-.about div.right .click.active:active {
+.about .right .click.active:active {
   transform: scale(0.9) rotate(0deg);
 }
 
@@ -128,7 +137,53 @@
   background-color: #f3ddb6;
 }
 
-.contact {
-  background-color: #cabbab;
-  height: 300px;
+@-webkit-keyframes box {
+  0%, 100% {
+    border-radius: 0% 33% 66% 100%;
+  }
+  16.66667% {
+    border-radius: 33% 66% 100% 66%;
+  }
+  33.33333% {
+    border-radius: 66% 100% 66% 33%;
+  }
+  50% {
+    border-radius: 100% 66% 33% 0%;
+  }
+  66.66667% {
+    border-radius: 66% 33% 0% 33%;
+  }
+  83.33333% {
+    border-radius: 33% 0% 33% 66%;
+  }
+}
+
+@keyframes box {
+  0%, 100% {
+    border-radius: 0% 33% 66% 100%;
+  }
+  16.66667% {
+    border-radius: 33% 66% 100% 66%;
+  }
+  33.33333% {
+    border-radius: 66% 100% 66% 33%;
+  }
+  50% {
+    border-radius: 100% 66% 33% 0%;
+  }
+  66.66667% {
+    border-radius: 66% 33% 0% 33%;
+  }
+  83.33333% {
+    border-radius: 33% 0% 33% 66%;
+  }
+}
+body {
+  background: #666;
+}
+
+img {
+  width: 300px;
+  z-index: 2;
+  top: 50%;
 }

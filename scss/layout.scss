@@ -3,10 +3,9 @@
 @import url('./reset.css');
 
 
-
 header {
     color: #fff;
-    
+
     .logo {
         position: fixed;
         top: 45px;
@@ -21,17 +20,37 @@ header {
         display: flex;
         z-index: 10;
 
-        li{
-           width: 50px;
+        li {
+            width: 50px;
         }
     }
-    &.hide{
+
+    &.hide {
         display: none;
     }
 }
 
-footer{
-    .up_btn{
+footer {
+    .contact {
+        background-color: $bg_gray;
+        color: $bg_green;
+        position: relative;
+        padding: 8%;
+
+        h2{
+            font-size: 100px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .info {
+            font-size: 25px;
+            line-height: 1.7;
+
+        }
+
+    }
+
+    .up_btn {
         display: flex;
         flex-direction: column;
         position: fixed;
@@ -44,16 +63,20 @@ footer{
         cursor: pointer;
         opacity: 0;
         visibility: hidden;
-        transition: opacity .4s ,visibility 0s .4s;
+        transition: opacity .4s, visibility 0s .4s;
 
-        img{
+        img {
             width: 35px;
             margin-bottom: 10px;
         }
 
-        &.on{
+        &.on {
             opacity: 1;
-        visibility: visible;
+            visibility: visible;
+
+            
+           
+            
         }
     }
 }
