@@ -2,35 +2,6 @@
   overflow: hidden;
 }
 
-:root {
-  --ease: cubic-bezier(0.29, 0.57, 0.12, 0.99);
-  --duration: .6s;
-  --size: 800px;
-  --scaleMask: 1;
-  --scaleBtn: 1;
-}
-@media (max-width: 900px) {
-  :root {
-    --size: 600px;
-    --scaleMask: .75;
-    --scaleBtn: .8;
-  }
-}
-@media (max-width: 700px) {
-  :root {
-    --size: 400px;
-    --scaleMask: .5;
-    --scaleBtn: .7;
-  }
-}
-@media (max-width: 500px) {
-  :root {
-    --size: 300px;
-    --scaleMask: .375;
-    --scaleBtn: .6;
-  }
-}
-
 .about {
   top: 0;
   left: 0;
@@ -57,7 +28,7 @@
 }
 .about .left ul li {
   display: flex;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 40px;
 }
 .about .left ul li em {

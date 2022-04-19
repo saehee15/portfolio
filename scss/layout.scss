@@ -2,81 +2,90 @@
 
 @import url('./reset.css');
 
-
-header {
-    color: #fff;
-
-    .logo {
-        position: fixed;
-        top: 45px;
-        left: 45px;
-        z-index: 10;
-    }
-
-    .meun {
-        position: fixed;
-        top: 45px;
-        right: 45px;
-        display: flex;
-        z-index: 10;
-
-        li {
-            width: 50px;
-        }
-    }
-
-    &.hide {
-        display: none;
-    }
+.loading{
+    background: $bg_yellow;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: block;
+    opacity: 1;
+    z-index: 100;
+    text-align: center;
+    background: $bg_yellow;
 }
-
-footer {
-    .contact {
-        background-color: $bg_gray;
-        color: $bg_green;
-        position: relative;
-        padding: 8%;
-
-        h2{
-            font-size: 100px;
-            font-weight: bold;
-            margin-bottom: 20px;
+    header {
+        color: #fff;
+    
+        .logo {
+            position: fixed;
+            top: 45px;
+            left: 45px;
+            z-index: 10;
         }
-        .info {
-            font-size: 25px;
-            line-height: 1.7;
-
+    
+        .meun {
+            position: fixed;
+            top: 45px;
+            right: 45px;
+            display: flex;
+            z-index: 10;
+    
+            li {
+                width: 50px;
+            }
         }
-
-    }
-
-    .up_btn {
-        display: flex;
-        flex-direction: column;
-        position: fixed;
-        right: 40px;
-        bottom: 40px;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        z-index: 10;
-        cursor: pointer;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .4s, visibility 0s .4s;
-
-        img {
-            width: 35px;
-            margin-bottom: 10px;
-        }
-
-        &.on {
-            opacity: 1;
-            visibility: visible;
-
-            
-           
-            
+    
+        &.hide {
+            display: none;
         }
     }
-}
+    
+    footer {
+        .contact {
+            background-color: $bg_gray;
+            color: $bg_green;
+            position: relative;
+            padding: 8%;
+    
+            h2{
+                font-size: 100px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .info {
+                font-size: 25px;
+                line-height: 1.7;
+    
+            }
+    
+        }
+    
+        .up_btn {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 10;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .4s, visibility 0s .4s;
+    
+            img {
+                width: 35px;
+                margin-bottom: 10px;
+            }
+    
+            &.on {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
