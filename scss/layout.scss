@@ -1,6 +1,7 @@
 @import './variables';
 
 @import url('./reset.css');
+@import url('./fonts.css');
 
 .loading{
     background: $bg_yellow;
@@ -15,6 +16,36 @@
     z-index: 100;
     text-align: center;
     background: $bg_yellow;
+    color: $txt;
+
+    .txt_wrap{
+    .count{
+        z-index: 6;
+        height: 80vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 60px;
+        font-family: $font-en;
+    }
+    .txt{
+        z-index: 6;
+        height: 110vh;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        font-family: $font-en;
+    }
+}
 }
     header {
         color: #fff;

@@ -1,4 +1,5 @@
 @import url("./reset.css");
+@import url("./fonts.css");
 .loading {
   background: #f3ddb6;
   width: 100%;
@@ -12,6 +13,33 @@
   z-index: 100;
   text-align: center;
   background: #f3ddb6;
+  color: #914343;
+}
+.loading .txt_wrap .count {
+  z-index: 6;
+  height: 80vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60px;
+  font-family: "Kenoky", "Noto Sans KR", sans-serif;
+}
+.loading .txt_wrap .txt {
+  z-index: 6;
+  height: 110vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: "Kenoky", "Noto Sans KR", sans-serif;
 }
 
 header {
