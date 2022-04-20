@@ -125,54 +125,112 @@
 }
 
 .work {
-  height: 1000px;
+  height: 1600px;
   width: 100%;
   background-color: $bg_yellow;
+  position: relative;
+  padding: 30px 0;
+
+
+  .card{
+    background-color: #ffffff;
+    color: $txt;
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    cursor: pointer;
+
+    img{
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+    a{
+      position: absolute;
+      z-index: 2;
+      opacity: 0;
+      padding: 5px;
+      border: 1px solid #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      background: #ffffff;
+
+      &.more{
+        bottom: 30px;
+        right: 35%;
+      }
+      &.site{
+        bottom: 30px;
+        right: 5%;
+      }
+    }
+    p{
+      position: absolute;
+      z-index: 10;
+      font-family: $font-en1;
+      overflow: visible;
+      color: #fff;
+
+    }
+    &:hover{
+      img{
+        opacity: 0.9;
+      }
+      a{
+        opacity: 0.9;
+      }
+      p{
+        opacity: 0;
+      }
+    }
+
+    &.first{
+      top: 8%;
+      right: 17%;
+
+      p{
+        bottom: -50px;
+        left: 10px;
+        font-size: 61px;
+      }
+
+    }
+    &.second{
+      top: 25%;
+      left: 8%;
+      a{ color: #005955;}
+      p{
+        bottom: -20px;
+        right: 50%;
+        font-size: 61px;
+        // color: #D3C175;
+      }
+
+    }
+    &.third{
+      top: 55%;
+      right: 8%;
+      
+      a{color: #E3919A;}
+      p{
+        bottom: -30px;
+        right: -10px;
+        font-size: 61px;
+      }
+    }
+    &.fourth{
+      top: 75%;
+      left: 20%;
+      a{ color: #000;}
+      p{
+        top: -10px;
+        right: -5px;
+        font-size: 61px;
+      }
+    }
+  }
 
 }
 
 
 
-
-$mix-blend-mode : screen;
-
-@keyframes box {
-
-  0%,
-  100% {
-    border-radius: 0% 33% 66% 100%;
-  }
-
-  16.66667% {
-    border-radius: 33% 66% 100% 66%;
-  }
-
-  33.33333% {
-    border-radius: 66% 100% 66% 33%;
-  }
-
-  50% {
-    border-radius: 100% 66% 33% 0%;
-  }
-
-  66.66667% {
-    border-radius: 66% 33% 0% 33%;
-  }
-
-  83.33333% {
-    border-radius: 33% 0% 33% 66%;
-  }
-}
-
-body {
-  background: #666;
-}
-
-
-img {
-  width: 300px;
-  z-index: 2;
-  top: 50%;
-
-
-}

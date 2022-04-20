@@ -104,58 +104,101 @@
 }
 
 .work {
-  height: 1000px;
+  height: 1600px;
   width: 100%;
   background-color: #f3ddb6;
+  position: relative;
+  padding: 30px 0;
 }
-
-@-webkit-keyframes box {
-  0%, 100% {
-    border-radius: 0% 33% 66% 100%;
-  }
-  16.66667% {
-    border-radius: 33% 66% 100% 66%;
-  }
-  33.33333% {
-    border-radius: 66% 100% 66% 33%;
-  }
-  50% {
-    border-radius: 100% 66% 33% 0%;
-  }
-  66.66667% {
-    border-radius: 66% 33% 0% 33%;
-  }
-  83.33333% {
-    border-radius: 33% 0% 33% 66%;
-  }
+.work .card {
+  background-color: #ffffff;
+  color: #914343;
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  cursor: pointer;
 }
-
-@keyframes box {
-  0%, 100% {
-    border-radius: 0% 33% 66% 100%;
-  }
-  16.66667% {
-    border-radius: 33% 66% 100% 66%;
-  }
-  33.33333% {
-    border-radius: 66% 100% 66% 33%;
-  }
-  50% {
-    border-radius: 100% 66% 33% 0%;
-  }
-  66.66667% {
-    border-radius: 66% 33% 0% 33%;
-  }
-  83.33333% {
-    border-radius: 33% 0% 33% 66%;
-  }
+.work .card img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
 }
-body {
-  background: #666;
-}
-
-img {
-  width: 300px;
+.work .card a {
+  position: absolute;
   z-index: 2;
-  top: 50%;
+  opacity: 0;
+  padding: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  background: #ffffff;
+}
+.work .card a.more {
+  bottom: 30px;
+  right: 35%;
+}
+.work .card a.site {
+  bottom: 30px;
+  right: 5%;
+}
+.work .card p {
+  position: absolute;
+  z-index: 10;
+  font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
+  overflow: visible;
+  color: #fff;
+}
+.work .card:hover img {
+  opacity: 0.9;
+}
+.work .card:hover a {
+  opacity: 0.9;
+}
+.work .card:hover p {
+  opacity: 0;
+}
+.work .card.first {
+  top: 8%;
+  right: 17%;
+}
+.work .card.first p {
+  bottom: -50px;
+  left: 10px;
+  font-size: 61px;
+}
+.work .card.second {
+  top: 25%;
+  left: 8%;
+}
+.work .card.second a {
+  color: #005955;
+}
+.work .card.second p {
+  bottom: -20px;
+  right: 50%;
+  font-size: 61px;
+}
+.work .card.third {
+  top: 55%;
+  right: 8%;
+}
+.work .card.third a {
+  color: #E3919A;
+}
+.work .card.third p {
+  bottom: -30px;
+  right: -10px;
+  font-size: 61px;
+}
+.work .card.fourth {
+  top: 75%;
+  left: 20%;
+}
+.work .card.fourth a {
+  color: #000;
+}
+.work .card.fourth p {
+  top: -10px;
+  right: -5px;
+  font-size: 61px;
 }

@@ -1,5 +1,6 @@
 $(function () {
 
+    // 로딩화면
     const loader = $('.loading');
     const html = $('html');
 
@@ -7,41 +8,41 @@ $(function () {
         'overflow': 'hidden'
     }); //로딩 중 스크롤 방지
 
-        setTimeout(() => {
-            loader.fadeOut(300);
-            html.css({
-                'overflow': 'auto'
-            }); //스크롤 방지 해제
+    setTimeout(() => {
+        loader.fadeOut(300);
+        html.css({
+            'overflow': 'auto'
+        }); //스크롤 방지 해제
 
-        }, 5000);
+    }, 5000);
 
     
-        $(function() {
-            var num = 1989;
-            var arr = ['Was born', 'Graduated high school','Graduated university', 'Entered distribution company','Went to Japan to study','Reentered distribution company','Entered it company','Welcome'];
-            var index = 0;
-            counterNum();
+    $(function() {
+        var num = 1989;
+        var arr = ['Was born', 'Graduated high school','Graduated university', 'Entered distribution company','Went to Japan to study','Reentered distribution company','Entered it company','Welcome'];
+        var index = 0;
+        counterNum();
   
-            function counterNum() {
-  
-              counter = setInterval(num1,100);
-              txt = setInterval(txt1,400);
-  
-              function num1() {
-                num++;
-                if (num > 2022) {
-                  clearInterval(num);
-                } else {
-                  $(".count").text(num);
-                }
-              }
-              function txt1() {
-                $(".txt").text(arr[index++]);
-              }
+        function counterNum() {
+
+            counter = setInterval(num1,100);
+            txt = setInterval(txt1,400);
+
+            function num1() {
+            num++;
+            if (num > 2022) {
+                clearInterval(num);
+            } else {
+                $(".count").text(num);
             }
-          });
+            }
+            function txt1() {
+            $(".txt").text(arr[index++]);
+            }
+        }
+    });
 
-
+    
 
     $('.click').click(function (e) {
         e.preventDefault();
