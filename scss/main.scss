@@ -14,6 +14,7 @@
   background-color: $bg_green;
   color: #fff;
   position: relative;
+  font-family: $font-en1;
 
 
   .left {
@@ -24,11 +25,14 @@
     position: absolute;
     transform: translateY(-50%);
     background-color: $bg_gray;
+    padding: 10px;
+
+    h2{
+      font-size: 100px;
+    }
 
     ul {
-      font-size: 80px;
       padding: 10px;
-      font-weight: bold;
       line-height: 150px;
 
       li {

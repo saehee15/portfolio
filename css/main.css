@@ -11,6 +11,7 @@
   background-color: #283f38;
   color: #fff;
   position: relative;
+  font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
 }
 .about .left {
   left: 10%;
@@ -20,11 +21,13 @@
   position: absolute;
   transform: translateY(-50%);
   background-color: #cabbab;
+  padding: 10px;
+}
+.about .left h2 {
+  font-size: 100px;
 }
 .about .left ul {
-  font-size: 80px;
   padding: 10px;
-  font-weight: bold;
   line-height: 150px;
 }
 .about .left ul li {

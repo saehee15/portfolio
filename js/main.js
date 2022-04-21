@@ -14,7 +14,7 @@ $(function () {
             'overflow': 'auto'
         }); //스크롤 방지 해제
 
-    }, 5000);
+    }, 4000);
 
     
     $(function() {
@@ -44,6 +44,7 @@ $(function () {
 
     
 
+    // about
     $('.click').click(function (e) {
         e.preventDefault();
         target = $('.work').offset().top
@@ -54,11 +55,20 @@ $(function () {
 
     });
 
+    // $(window).scroll(function(){
+    //     gsap.fromTo('.left h2',4, {
+    //         yPercent: 400,
+    //     }, {
+    //         yPercent: 0,
+    //         stagger: 0.2,
+    //         fontSize: 80,
+    //     })
+    // })
+
 
     ScrollTrigger.create({
         trigger: ".work",
         start: "top 0%",
-        markers: true,
         onEnter: function () {
             $('.up_btn').addClass('on');
         },
@@ -97,24 +107,57 @@ $(function () {
             yPercent: 0,
             stagger: 0.05
         }, 'm1')
-        .fromTo('.txt_hide li', {
+        .fromTo('.txt_hide li',{
             opacity: 0
         }, {
             opacity: 1
         }, "m1+=0.5")
-    // .fromTo('.prd_item .img_container',{opacity:0,rotation:3},{opacity:1, rotation:0},"m1+=1")
+  
+
+    //work
+    gsap.utils.toArray('.work .card').forEach(el => {
+        gsap.fromTo(el,{
+            scale:0.8,
+            opacity:0,
+            filter: 'blur(30px)'
+        },{
+            scrollTrigger:{
+                trigger:el,
+                start:"top 50%",
+                markers: true
+            },
+            scale:1,
+            opacity: 1,
+            filter: 'blur(0px)'
+        })
+    });
 
 
-    // const introTxt = new SplitType('.left .txt_hide', { types: 'words, chars', });
-
-    // gsap.fromTo(introTxt.chars,1,{
-    //     opacity: 0,
-    //     yPercent: 100
-    // },{
-    //     opacity: 1,
-    //     yPercent: 0,
-    //     stagger:0.05
-    // })
+    var path = document.querySelector('#line');
+    // Get length of path...
+    var pathLength = path.getTotalLength();
+    
+    console.log(pathLength);
+    
+    // Make very long dashes (the length of the path itself)
+    path.style.strokeDasharray = pathLength + ' ' + pathLength ;
+    
+    // Offset the dashes so the it appears hidden entirely
+    path.style.strokeDashoffset = pathLength;
+    
+    // When the page scrolls...
+    window.addEventListener("scroll", function(e) {
+     
+      // What % down is it? 
+      var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+        
+      // Length to offset the dashes
+      var drawLength = pathLength  * scrollPercentage;
+      
+      // Draw in reverse
+      path.style.strokeDashoffset = pathLength - drawLength;
+      
+    });
 
 
 })
