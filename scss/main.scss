@@ -75,8 +75,8 @@
 
     .click {
       z-index: 1;
-      width: 600px;
-      height: 600px;
+      width: 120px;
+      height: 120px;
 
       &.active {
         position: absolute;
@@ -85,8 +85,6 @@
         right: -8%;
         transform: rotate(20deg) scale(1);
         transition: transform .2s;
-        width: 120px;
-        height: 120px;
         background: $bg_gray;
         box-shadow: 0 10px 20px -6px $bg_gray;
         border-radius: 50%;
@@ -147,10 +145,9 @@
       width: 400px;
       right: 5%;
 
-      .click 
-      {
-        width: 200px;
-        height: 200px;
+      .click {
+        width: 100px;
+        height: 100px;
       }
     }
   }
@@ -159,8 +156,9 @@
     height: 1300px;
 
    .left{
-     width: 400px;
-     left: 0;
+     width: 350px;
+     left: 50%;
+     transform: translateX(-50%);
      bottom: 10%;
 
      h2{
@@ -168,23 +166,24 @@
      }
      ul{
       li{
-        font-size: 20px;
+        font-size: 18px;
         em{
-          width: 200px;
+          width: 150px;
           margin-right: 5px;
         }
       }
      }
    }
    .right{
-     width: 400px;
-     right: 0;
-     bottom: 40%;
+     width: 350px;
+     left: 50%;
+     transform: translateX(-50%);
+     bottom: 50%;
 
      .click 
      {
-       width: 200px;
-       height: 200px;
+       width: 80px;
+       height: 80px;
      }
 
    }
@@ -193,7 +192,7 @@
 }
 
 .work {
-  height: 1500px;
+  height: 1800px;
   width: 100%;
   background-color: $bg_yellow;
   position: relative;
@@ -302,9 +301,58 @@
   }
 
 @include mobile{
+  height: 1800px;
+  svg{
+    path{
+      stroke-width: 400px
+    }
+  }
   .card{
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
+    &.first{
+      top: 8%;
+      right: 17%;
+
+      p{
+        bottom: -50px;
+        left: 10px;
+        font-size: 50px;
+      }
+
+    }
+    &.second{
+      top: 35%;
+      left: 8%;
+      a{ color: #005955;}
+      p{
+        bottom: -20px;
+        right: 50%;
+        font-size: 50px;
+      }
+
+    }
+    &.third{
+      top: 55%;
+      right: 8%;
+      
+      a{color: #E3919A;}
+      p{
+        bottom: -30px;
+        right: -10px;
+        font-size: 50px;
+      }
+    }
+    &.fourth{
+      top: 80%;
+      left: 5%;
+      a{ color: #000;}
+      p{
+        top: -10px;
+        right: -5px;
+        font-size: 50px;
+      }
+    }
   }
 }
 }

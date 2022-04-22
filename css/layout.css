@@ -119,3 +119,8 @@ footer .up_btn.on {
     font-size: 80px;
   }
 }
+@media (max-width: 767px) {
+  footer .contact h2 {
+    font-size: 50px;
+  }
+}

@@ -135,6 +135,13 @@ footer {
                 h2{
                     font-size: 80px
                 }
+            }
+        }
+        @include mobile{
+            .contact{
+                h2{
+                    font-size: 50px
+                }
 
             }
         }

@@ -63,8 +63,8 @@
 }
 .about .right .click {
   z-index: 1;
-  width: 600px;
-  height: 600px;
+  width: 120px;
+  height: 120px;
 }
 .about .right .click.active {
   position: absolute;
@@ -73,8 +73,6 @@
   right: -8%;
   transform: rotate(20deg) scale(1);
   transition: transform 0.2s;
-  width: 120px;
-  height: 120px;
   background: #cabbab;
   box-shadow: 0 10px 20px -6px #cabbab;
   border-radius: 50%;
@@ -125,8 +123,8 @@
     right: 5%;
   }
   .about .right .click {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
   }
 }
 @media (max-width: 767px) {
@@ -134,33 +132,35 @@
     height: 1300px;
   }
   .about .left {
-    width: 400px;
-    left: 0;
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 10%;
   }
   .about .left h2 {
     font-size: 80px;
   }
   .about .left ul li {
-    font-size: 20px;
+    font-size: 18px;
   }
   .about .left ul li em {
-    width: 200px;
+    width: 150px;
     margin-right: 5px;
   }
   .about .right {
-    width: 400px;
-    right: 0;
-    bottom: 40%;
+    width: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50%;
   }
   .about .right .click {
-    width: 200px;
-    height: 200px;
+    width: 80px;
+    height: 80px;
   }
 }
 
 .work {
-  height: 1500px;
+  height: 1800px;
   width: 100%;
   background-color: #f3ddb6;
   position: relative;
@@ -264,8 +264,59 @@
   }
 }
 @media (max-width: 767px) {
+  .work {
+    height: 1800px;
+  }
+  .work svg path {
+    stroke-width: 400px;
+  }
   .work .card {
-    width: 300px;
-    height: 300px;
+    width: 270px;
+    height: 270px;
+  }
+  .work .card.first {
+    top: 8%;
+    right: 17%;
+  }
+  .work .card.first p {
+    bottom: -50px;
+    left: 10px;
+    font-size: 50px;
+  }
+  .work .card.second {
+    top: 35%;
+    left: 8%;
+  }
+  .work .card.second a {
+    color: #005955;
+  }
+  .work .card.second p {
+    bottom: -20px;
+    right: 50%;
+    font-size: 50px;
+  }
+  .work .card.third {
+    top: 55%;
+    right: 8%;
+  }
+  .work .card.third a {
+    color: #E3919A;
+  }
+  .work .card.third p {
+    bottom: -30px;
+    right: -10px;
+    font-size: 50px;
+  }
+  .work .card.fourth {
+    top: 80%;
+    left: 5%;
+  }
+  .work .card.fourth a {
+    color: #000;
+  }
+  .work .card.fourth p {
+    top: -10px;
+    right: -5px;
+    font-size: 50px;
   }
 }
