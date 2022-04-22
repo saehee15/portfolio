@@ -21,9 +21,9 @@ $(function () {
         var num = 1989;
         var arr = ['Was born', 'Graduated high school','Graduated university', 'Entered distribution company','Went to Japan to study','Reentered distribution company','Entered it company','Welcome'];
         var index = 0;
-        counterNum();
+        loading();
   
-        function counterNum() {
+        function loading() {
 
             counter = setInterval(num1,100);
             txt = setInterval(txt1,400);
@@ -45,6 +45,34 @@ $(function () {
     
 
     // about
+    $('.m_about').click(function (e) {
+        e.preventDefault();
+        target = $('.about').offset().top
+
+        gsap.to('body, html', {
+            'scrollTop': target
+        })
+
+    });
+    $('.m_work').click(function (e) {
+        e.preventDefault();
+        target = $('.work').offset().top
+
+        gsap.to('body, html', {
+            'scrollTop': target
+        })
+
+    });
+    $('.m_contact').click(function (e) {
+        e.preventDefault();
+        target = $('footer').offset().top
+
+        gsap.to('body, html', {
+            'scrollTop': target
+        })
+
+    });
+
     $('.click').click(function (e) {
         e.preventDefault();
         target = $('.work').offset().top
@@ -55,15 +83,6 @@ $(function () {
 
     });
 
-    // $(window).scroll(function(){
-    //     gsap.fromTo('.left h2',4, {
-    //         yPercent: 400,
-    //     }, {
-    //         yPercent: 0,
-    //         stagger: 0.2,
-    //         fontSize: 80,
-    //     })
-    // })
 
 
     ScrollTrigger.create({
@@ -91,7 +110,7 @@ $(function () {
     //txt
     const prdMotion = gsap.timeline({
         defaults: {
-            duration: 1,
+            duration: 5,
         }
     })
     const prdTxt = new SplitType('.left .txt_hide h2', {
@@ -132,6 +151,8 @@ $(function () {
         })
     });
 
+
+   
 
     var path = document.querySelector('#line');
     // Get length of path...

@@ -44,6 +44,7 @@
 
 header {
   color: #fff;
+  font-family: "Kenoky", "Noto Sans KR", sans-serif;
 }
 header .logo {
   position: fixed;
@@ -60,6 +61,7 @@ header .meun {
 }
 header .meun li {
   width: 50px;
+  margin-right: 10px;
 }
 header.hide {
   display: none;
@@ -78,7 +80,15 @@ footer .contact h2 {
 }
 footer .contact .info {
   font-size: 25px;
-  line-height: 1.7;
+  line-height: 2;
+  font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
+}
+footer .contact .sns {
+  margin-top: 10px;
+}
+footer .contact .sns img {
+  width: 40px;
+  height: 40px;
 }
 footer .up_btn {
   display: flex;
@@ -94,6 +104,7 @@ footer .up_btn {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s 0.4s;
+  font-family: "Kenoky", "Noto Sans KR", sans-serif;
 }
 footer .up_btn img {
   width: 35px;
@@ -102,4 +113,9 @@ footer .up_btn img {
 footer .up_btn.on {
   opacity: 1;
   visibility: visible;
+}
+@media (max-width: 1024px) {
+  footer .contact h2 {
+    font-size: 80px;
+  }
 }

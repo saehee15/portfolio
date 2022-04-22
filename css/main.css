@@ -7,21 +7,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 726px;
+  height: 800px;
   background-color: #283f38;
   color: #fff;
   position: relative;
   font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 35%;
 }
 .about .left {
-  left: 10%;
-  top: 60%;
+  position: absolute;
   width: 500px;
   height: auto;
-  position: absolute;
-  transform: translateY(-50%);
   background-color: #cabbab;
   padding: 10px;
+  left: 10%;
+  bottom: 15%;
 }
 .about .left h2 {
   font-size: 100px;
@@ -40,13 +43,10 @@
   width: 200px;
 }
 .about .right {
-  right: 10%;
-  width: 500px;
-  height: 300px;
   position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
-  background-color: #cabbab;
+  width: 500px;
+  right: 10%;
+  bottom: 15%;
 }
 .about .right .img_container {
   padding-bottom: 100%;
@@ -69,7 +69,7 @@
 .about .right .click.active {
   position: absolute;
   z-index: 10;
-  top: 130%;
+  bottom: 0%;
   right: -8%;
   transform: rotate(20deg) scale(1);
   transition: transform 0.2s;
@@ -105,13 +105,66 @@
 .about .right .click.active:active {
   transform: scale(0.9) rotate(0deg);
 }
+@media (max-width: 1024px) {
+  .about .left {
+    width: 400px;
+    left: 5%;
+  }
+  .about .left h2 {
+    font-size: 80px;
+  }
+  .about .left ul li {
+    font-size: 15px;
+  }
+  .about .left ul li em {
+    width: 200px;
+    margin-right: 5px;
+  }
+  .about .right {
+    width: 400px;
+    right: 5%;
+  }
+  .about .right .click {
+    width: 200px;
+    height: 200px;
+  }
+}
+@media (max-width: 767px) {
+  .about {
+    height: 1300px;
+  }
+  .about .left {
+    width: 400px;
+    left: 0;
+    bottom: 10%;
+  }
+  .about .left h2 {
+    font-size: 80px;
+  }
+  .about .left ul li {
+    font-size: 20px;
+  }
+  .about .left ul li em {
+    width: 200px;
+    margin-right: 5px;
+  }
+  .about .right {
+    width: 400px;
+    right: 0;
+    bottom: 40%;
+  }
+  .about .right .click {
+    width: 200px;
+    height: 200px;
+  }
+}
 
 .work {
-  height: 1600px;
+  height: 1500px;
   width: 100%;
   background-color: #f3ddb6;
   position: relative;
-  padding: 30px 0;
+  padding: 200px 0;
 }
 .work .card {
   background-color: #ffffff;
@@ -148,7 +201,6 @@
   position: absolute;
   z-index: 10;
   font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
-  overflow: visible;
   color: #fff;
 }
 .work .card:hover img {
@@ -204,4 +256,16 @@
   top: -10px;
   right: -5px;
   font-size: 61px;
+}
+@media (max-width: 1024px) {
+  .work .card {
+    width: 300px;
+    height: 300px;
+  }
+}
+@media (max-width: 767px) {
+  .work .card {
+    width: 300px;
+    height: 300px;
+  }
 }
