@@ -4,167 +4,57 @@
 }
 
 .about {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 800px;
+  height: 100vh;
   background-color: #283f38;
+  font-weight: 500px;
   color: #fff;
   position: relative;
   font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  bottom: 35%;
-}
-.about .left {
-  position: absolute;
-  width: 500px;
-  height: auto;
-  background-color: #cabbab;
-  padding: 10px;
-  left: 10%;
-  bottom: 15%;
-}
-.about .left h2 {
-  font-size: 100px;
-}
-.about .left ul {
-  padding: 10px;
-  line-height: 150px;
-}
-.about .left ul li {
-  display: flex;
-  font-size: 20px;
-  line-height: 40px;
-}
-.about .left ul li em {
-  margin-right: 10px;
-  width: 200px;
-}
-.about .right {
-  position: absolute;
-  width: 500px;
-  right: 10%;
-  bottom: 15%;
-}
-.about .right .img_container {
-  padding-bottom: 100%;
-  position: relative;
-}
-.about .right .img_container img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.about .right .click {
-  z-index: 1;
-  width: 120px;
-  height: 120px;
-}
-.about .right .click.active {
-  position: absolute;
-  z-index: 10;
-  bottom: 0%;
-  right: -8%;
-  transform: rotate(20deg) scale(1);
-  transition: transform 0.2s;
-  background: #cabbab;
-  box-shadow: 0 10px 20px -6px #cabbab;
-  border-radius: 50%;
-  color: #fff;
-  display: flex;
   justify-content: center;
   align-items: center;
-  text-transform: uppercase;
-  cursor: pointer;
-  overflow: hidden;
+  text-align: center;
 }
-.about .right .click.active:before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  left: 0;
+.about .title-box {
+  font-size: 3vw;
+  line-height: 1.5;
+}
+.about .title-box span {
+  display: block;
+  opacity: 0;
+}
+.about .title-box span:nth-child(1) {
+  opacity: 1;
+}
+.about .img_container {
+  width: 350px;
+  height: 350px;
+}
+.about .img_container img {
   width: 100%;
   height: 100%;
-  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: scale(1.2);
-  transition: transform 0.4s;
-}
-.about .right .click.active:hover:before {
-  transform: scale(1);
-}
-.about .right .click.active:active {
-  transform: scale(0.9) rotate(0deg);
-}
-@media (max-width: 1024px) {
-  .about .left {
-    width: 400px;
-    left: 5%;
-  }
-  .about .left h2 {
-    font-size: 80px;
-  }
-  .about .left ul li {
-    font-size: 15px;
-  }
-  .about .left ul li em {
-    width: 200px;
-    margin-right: 5px;
-  }
-  .about .right {
-    width: 400px;
-    right: 5%;
-  }
-  .about .right .click {
-    width: 100px;
-    height: 100px;
-  }
 }
 @media (max-width: 767px) {
   .about {
     height: 1300px;
   }
-  .about .left {
-    width: 350px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10%;
-  }
-  .about .left h2 {
-    font-size: 80px;
-  }
-  .about .left ul li {
-    font-size: 18px;
-  }
-  .about .left ul li em {
-    width: 150px;
-    margin-right: 5px;
-  }
-  .about .right {
-    width: 350px;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 50%;
-  }
-  .about .right .click {
-    width: 80px;
-    height: 80px;
-  }
 }
 
 .work {
-  height: 1800px;
+  height: 280vh;
   width: 100%;
-  background-color: #f3ddb6;
+  background-color: #283f38;
   position: relative;
   padding: 200px 0;
+}
+.work::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 70%);
 }
 .work .card {
   background-color: #ffffff;
@@ -179,29 +69,45 @@
   height: 100%;
   opacity: 1;
 }
-.work .card a {
-  position: absolute;
-  z-index: 2;
-  opacity: 0;
-  padding: 5px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-  padding: 10px;
-  background: #ffffff;
+.work .card .btn_area {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.work .card a.more {
-  bottom: 30px;
-  right: 35%;
+.work .card .btn_area a {
+  color: #fff;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
 }
-.work .card a.site {
-  bottom: 30px;
-  right: 5%;
+.work .card .btn_area a + a {
+  margin-top: 20px;
 }
-.work .card p {
+.work .card .btn_area a.more::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/Notion_logo.png) center/100% no-repeat;
+  vertical-align: top;
+  margin: -3px 10px 0 0;
+}
+.work .card .btn_area a.site::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url(../img/github_logo.png) center/100% no-repeat;
+  color: #fff;
+  vertical-align: top;
+  margin: -3px 10px 0 0;
+}
+.work .card h3 {
   position: absolute;
   z-index: 10;
-  font-family: "Bebas Neue", "Noto Sans KR", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #fff;
+  font-size: 61px;
 }
 .work .card:hover img {
   opacity: 0.9;
@@ -216,46 +122,33 @@
   top: 8%;
   right: 17%;
 }
-.work .card.first p {
+.work .card.first h3 {
   bottom: -50px;
   left: 10px;
-  font-size: 61px;
 }
 .work .card.second {
   top: 25%;
   left: 8%;
 }
-.work .card.second a {
-  color: #005955;
-}
-.work .card.second p {
+.work .card.second h3 {
   bottom: -20px;
   right: 50%;
-  font-size: 61px;
 }
 .work .card.third {
   top: 55%;
   right: 8%;
 }
-.work .card.third a {
-  color: #E3919A;
-}
-.work .card.third p {
+.work .card.third h3 {
   bottom: -30px;
   right: -10px;
-  font-size: 61px;
 }
 .work .card.fourth {
   top: 75%;
   left: 20%;
 }
-.work .card.fourth a {
-  color: #000;
-}
-.work .card.fourth p {
+.work .card.fourth h3 {
   top: -10px;
   right: -5px;
-  font-size: 61px;
 }
 @media (max-width: 1024px) {
   .work .card {
@@ -287,9 +180,6 @@
     top: 35%;
     left: 8%;
   }
-  .work .card.second a {
-    color: #005955;
-  }
   .work .card.second p {
     bottom: -20px;
     right: 50%;
@@ -299,9 +189,6 @@
     top: 55%;
     right: 8%;
   }
-  .work .card.third a {
-    color: #E3919A;
-  }
   .work .card.third p {
     bottom: -30px;
     right: -10px;
@@ -310,9 +197,6 @@
   .work .card.fourth {
     top: 80%;
     left: 5%;
-  }
-  .work .card.fourth a {
-    color: #000;
   }
   .work .card.fourth p {
     top: -10px;

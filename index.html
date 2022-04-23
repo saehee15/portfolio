@@ -9,98 +9,108 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/layout.css">
-    
-</head>
 
+</head>
 <body>
     <div class="loading">
         <div class="txt_wrap">
-        <div class="count"></div>
-        <div class="txt"></div>
+            <div class="count"></div>
+            <div class="txt"></div>
         </div>
     </div>
-        <header>
-            <h1 class="logo">
-                <a href="">saehee</a>
-            </h1>
-            <ul class="meun">
-                <li><a href="" class="m_about">about</a></li>
-                <li><a href="" class="m_work">work</a></li>
-                <li><a href="" class="m_contact">contact</a></li>
-            </ul>
-        </header>
-        <main>
-            <div class="about">
-                <div class="left">
-                <h2>ABOUT ME!</h2>
-                <ul class="txt_hide">
-                    <li><em>1989.09</em><p>출생</p></li>
-                    <li><em>2010.03 ~ 2014.02</em><p>백석대 입학, 졸업</p></li>
-                    <li><em>2014.12 ~ 2016.05</em><p>전자랜드 B2B영업팀</p></li>
-                    <li><em>2016.06 ~ 2017.07</em><p>일본유학 </p></li>
-                    <li><em>2017.08 ~ 2021.09</em><p>전자랜드 B2B영업팀</p></li>
-                    <li><em>2022.10 ~ </em><p>대시앤닷</p></li>
-                </ul>
-                </div>
-                <div class="right">
-                    <div class="img_container">
-                        <img src="./img/me.jpeg" class="active" />
-                    </div>
-                    <div class="click active">
+    <header>
+        <h1 class="logo">
+            <a href="">saehee</a>
+        </h1>
+        <ul class="meun">
+            <li><a href="" data-target=".about" class="link-target m_about">about</a></li>
+            <li><a href="" data-target=".work" class="link-target m_work">work</a></li>
+            <li><a href="" data-target=".contact" class="link-target m_contact">contact</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="about">
+            <h2 class="title-box">
+                <span class="word">반갑습니다!</span>
+                <span class="word">저는 견고한 UI와</span>
+                <span class="word"> 기억에 남는 UX를 만드는</span>
+                <span class="word">UI 마크업 개발자 입니다.</span>
+            </h2>
+                <div class="img_container">
+                    <img src="./img/me.jpeg" class="active" />
+                    <div class="link-target click active" data-target=".work">
                         Start!
-                      </div>
-                </div>
-            </div>
-            <div class="work">
-                <svg class="line-svg" role="presentational" preserveAspectRatio="xMidYMin slice" width="100%" fill="none" viewBox="-480 0 2300 2241">
-                    <path id="line" stroke="#FFFFFF" stroke-width="200" d="M-841 100H584c124 0 225 101 225 225v0c0 124-101 225-225 225h-95a281 281 0 00-281 281v0c0 155 125 281 281 281h442c167 0 304 136 304 304v0c0 168-137 304-304 304H795a439 439 0 00-439 439v82" opacity=".45"></path>
-            </svg>
-            
-                <div class="card first">
-                    <img src="./img/work1.jpeg" alt="architecture">
-                        <a href="https://fluffy-origami-456.notion.site/df6ef19bc2de4e29a4c3d85897f7c870" target="_blank" class="more">More about</a>
-                        <a href="https://peppy-malabi-023898.netlify.app/" target="_blank" class="site">Go to site</a>
-                        <p>ARCHITECTURE</p>
-                </div>
-                <div class="card second">
-                        <img src="./img/work2.png" alt="rejuran">
-                        <a href="https://fluffy-origami-456.notion.site/5f9f505c11ff4574857a9f81f00ff010" target="_blank" class="more">More about</a>
-                        <a href="https://deluxe-centaur-8c5ceb.netlify.app/" target="_blank" class="site">Go to site</a>
-                        <p>REJURAN</p>
-                </div>
-                <div class="card third">
-                    <img src="./img/work3.png" alt="chanel">
-                        <a href="https://fluffy-origami-456.notion.site/862a80b3f53f4e3f943f9227ba171b13" target="_blank" class="more">More about</a>
-                        <a href="https://profound-twilight-b40e47.netlify.app/" target="_blank" class="site">Go to site</a>
-                        <p>CHANEL</p>
-                </div>
-                <div class="card fourth">
-                    <img src="./img/work4.png" alt="seoulcityhall">
-                        <a href="https://fluffy-origami-456.notion.site/6c8f60cf8ded47f6babb408244a4e136" target="_blank" class="more">More about</a>
-                        <a href="https://charming-chimera-c09163.netlify.app/" target="_blank" class="site">Go to site</a>
-                        <p>SEOUL CITYHALL</p>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="contact">
-                <h2>Contact Me!</h2>
-                <div class="info">
-                    <div class="email">sae_hwi@naver.com</div>
-                    <div class="phone">+82)010-4034-4328</div>
-                    <div class="sns github">
-                        <a href="https://github.com/saehee15" target="_blank">
-                            <img src="./img/icon_github.png" alt="깃허브 아이콘">
-                        </a>
                     </div>
                 </div>
+                
+        </div>
+        <div class="work">
+            <svg class="line-svg" role="presentational" preserveAspectRatio="xMidYMin slice" width="100%" fill="none"
+                viewBox="-480 0 2300 2241">
+                <path id="line" stroke="#FFFFFF" stroke-width="20"
+                    d="M-841 100H584c124 0 225 101 225 225v0c0 124-101 225-225 225h-95a281 281 0 00-281 281v0c0 155 125 281 281 281h442c167 0 304 136 304 304v0c0 168-137 304-304 304H795a439 439 0 00-439 439v82"
+                    opacity=".45"></path>
+            </svg>
+            <div class="card first">
+                <img src="./img/work1.jpeg" alt="architecture">
+               
+                <h3>ARCHITECTURE</h3>
+                <div class="btn_area">
+                    <a href="https://fluffy-origami-456.notion.site/df6ef19bc2de4e29a4c3d85897f7c870" target="_blank"
+                        class="more">이슈 및 코드리뷰</a>
+                    <a href="" target="_blank" class="site">URL 바로가기</a>
+                </div>
             </div>
-            <div class="up_btn">
-                <img src="./img/up.png" alt="위로가기 아이콘">
-                <span>Scroll to top</span>
+            <div class="card second">
+                <img src="./img/work2.png" alt="rejuran">
+                <h3>REJURAN</h3>
+                <div class="btn_area">
+                    <a href="https://fluffy-origami-456.notion.site/5f9f505c11ff4574857a9f81f00ff010" target="_blank"
+                        class="more">이슈 및 코드리뷰</a>
+                    <a href="" target="_blank" class="site">URL 바로가기</a>
+                </div>
+               
             </div>
-        </footer>
-        
+            <div class="card third">
+                <img src="./img/work3.png" alt="chanel">
+                <h3>CHANEL</h3>
+                <div class="btn_area">
+                    <a href="https://fluffy-origami-456.notion.site/862a80b3f53f4e3f943f9227ba171b13" target="_blank"
+                        class="more">이슈 및 코드리뷰</a>
+                    <a href="" target="_blank" class="site">URL 바로가기</a>
+                </div>
+              
+            </div>
+            <div class="card fourth">
+                <img src="./img/work4.png" alt="seoulcityhall">
+                <h3>SEOUL CITYHALL</h3>
+                <div class="btn_area">
+                    <a href="https://fluffy-origami-456.notion.site/6c8f60cf8ded47f6babb408244a4e136" target="_blank"
+                        class="more">이슈 및 코드리뷰</a>
+                    <a href="" target="_blank" class="site">URL 바로가기</a>
+                </div>
+              
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="contact">
+            <h2>Contact Me!</h2>
+            <div class="info">
+                <div class="email">sae_hwi@naver.com</div>
+                <div class="phone">+82)010-4034-4328</div>
+                <div class="sns github">
+                    <a href="https://github.com/saehee15" target="_blank">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="up_btn">
+            <img src="./img/up.png" alt="위로가기 아이콘">
+            <span>Scroll to top</span>
+        </div>
+    </footer>
+
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./js/spliteType.js"></script>

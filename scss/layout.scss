@@ -78,28 +78,37 @@ header {
 }
     
 footer {
+    text-align: center;
         .contact {
-            background-color: $bg_gray;
-            color: $bg_green;
+            background-color: #000;
+            color: #fff;
             position: relative;
             padding: 8%;
     
             h2{
                 font-size: 100px;
                 margin-bottom: 20px;
-                font-family: $font-en1;
+                font-family: $font-en2;
             }
             .info {
                 font-size: 25px;
                 line-height: 2;
-                font-family: $font-en1;
+                font-family: $font-en2;
             }
             .sns{
                 margin-top: 10px;
-               img{
-                   width: 40px;
-                   height: 40px;
-               }
+
+                   a{
+                    &::before{
+                        content: '';
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        background: url(../img/github_logo.png) center/100% no-repeat;
+                       color: #fff;
+                        vertical-align: top;
+                      }
+                   }
             }
         }
     
@@ -117,7 +126,7 @@ footer {
             opacity: 0;
             visibility: hidden;
             transition: opacity .4s, visibility 0s .4s;
-            font-family: $font-en;
+            font-family: $font-en2;
     
             img {
                 width: 35px;

@@ -8,195 +8,63 @@
 }
 
 .about {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 800px;
+  height: 100vh;
   background-color: $bg_green;
+  font-weight: 500px;
   color: #fff;
   position: relative;
   font-family: $font-en1;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  bottom: 35%;
+  text-align: center;
+ 
 
-  .left {
-    position: absolute;
-    width: 500px;
-    height: auto;
-    background-color: $bg_gray;
-    padding: 10px;
-    left: 10%;
-    bottom: 15%;
-
-    h2{
-      font-size: 100px;
-    }
-
-    ul {
-      padding: 10px;
-      line-height: 150px;
-
-      li {
-        display: flex;
-        font-size: 20px;
-        line-height: 40px;
-
-        em {
-          margin-right: 10px;
-          width: 200px;
-        }
-
-        p {}
+  .title-box{
+    font-size: 3vw;
+    line-height: 1.5;
+    span{
+      display: block;
+      opacity: 0;
+      &:nth-child(1){
+        opacity: 1;
       }
     }
   }
-
-  .right {
-    position: absolute;
-    width: 500px;
-    right: 10%;
-    bottom: 15%;
-
-    .img_container {
-      padding-bottom: 100%;
-      position: relative;
-
-      img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .click {
-      z-index: 1;
-      width: 120px;
-      height: 120px;
-
-      &.active {
-        position: absolute;
-        z-index: 10;
-        bottom: 0%;
-        right: -8%;
-        transform: rotate(20deg) scale(1);
-        transition: transform .2s;
-        background: $bg_gray;
-        box-shadow: 0 10px 20px -6px $bg_gray;
-        border-radius: 50%;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-transform: uppercase;
-        cursor: pointer;
-        overflow: hidden;
-
-        &:before {
-          content: '';
-          position: absolute;
-          z-index: 2;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          box-shadow: inset 0 0 0 10px #ffffff33;
-          border-radius: 50%;
-          transform: scale(1.2);
-          transition: transform .4s;
-        }
-
-        &:hover {
-          &:before {
-            transform: scale(1);
-          }
-        }
-
-        &:active {
-          transform: scale(0.9) rotate(0deg);
-        }
-      }
+  .img_container{
+    width: 350px;
+    height: 350px;
+    img{
+      width: 100%;
+      height: 100%;
     }
   }
-
+ 
   @include tablet{
-    .left{
-      width: 400px;
-      left: 5%;
-      h2{
-        font-size: 80px;
-      }
-      ul{
-        li{
-          font-size: 15px;
-          em{
-            width: 200px;
-            margin-right: 5px;
-          }
-        }
-      }
-     
-    }
-    .right{
-      width: 400px;
-      right: 5%;
-
-      .click {
-        width: 100px;
-        height: 100px;
-      }
-    }
   }
 
   @include mobile{
     height: 1300px;
-
-   .left{
-     width: 350px;
-     left: 50%;
-     transform: translateX(-50%);
-     bottom: 10%;
-
-     h2{
-       font-size: 80px;
-     }
-     ul{
-      li{
-        font-size: 18px;
-        em{
-          width: 150px;
-          margin-right: 5px;
-        }
-      }
-     }
-   }
-   .right{
-     width: 350px;
-     left: 50%;
-     transform: translateX(-50%);
-     bottom: 50%;
-
-     .click 
-     {
-       width: 80px;
-       height: 80px;
-     }
-
-   }
 }
 
 }
 
 .work {
-  height: 1800px;
+  height: 280vh;
   width: 100%;
-  background-color: $bg_yellow;
+  background-color: $bg_green;
   position: relative;
   padding: 200px 0;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 70%);
+  }
 
 
   .card{
@@ -207,35 +75,58 @@
     position: absolute;
     cursor: pointer;
 
+
     img{
       width: 100%;
       height: 100%;
       opacity: 1;
     }
-    a{
-      position: absolute;
-      z-index: 2;
-      opacity: 0;
-      padding: 5px;
-      border: 1px solid #ffffff;
-      border-radius: 10px;
-      padding: 10px;
-      background: #ffffff;
+    .btn_area{
+      margin-top: 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
-      &.more{
-        bottom: 30px;
-        right: 35%;
-      }
-      &.site{
-        bottom: 30px;
-        right: 5%;
+      a{
+        color: #fff;
+        font-weight: 500;
+        font-family: $font-en2;
+        &+a{
+          margin-top: 20px;
+        }
+  
+        &.more{
+          &::before{
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../img/Notion_logo.png) center/100% no-repeat;
+            vertical-align: top;
+            margin: -3px 10px 0 0;
+          }
+        }
+        &.site{
+          &::before{
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url(../img/github_logo.png) center/100% no-repeat;
+           color: #fff;
+            vertical-align: top;
+            margin: -3px 10px 0 0;
+          }
+        }
       }
     }
-    p{
+   
+    h3{
       position: absolute;
       z-index: 10;
-      font-family: $font-en1;
+      font-family: $font-en2;
       color: #fff;
+      font-size: 61px;
     }
     &:hover{
       img{
@@ -253,21 +144,18 @@
       top: 8%;
       right: 17%;
 
-      p{
+      h3{
         bottom: -50px;
         left: 10px;
-        font-size: 61px;
       }
 
     }
     &.second{
       top: 25%;
       left: 8%;
-      a{ color: #005955;}
-      p{
+      h3{
         bottom: -20px;
         right: 50%;
-        font-size: 61px;
       }
 
     }
@@ -275,21 +163,17 @@
       top: 55%;
       right: 8%;
       
-      a{color: #E3919A;}
-      p{
+      h3{
         bottom: -30px;
         right: -10px;
-        font-size: 61px;
       }
     }
     &.fourth{
       top: 75%;
       left: 20%;
-      a{ color: #000;}
-      p{
+      h3{
         top: -10px;
         right: -5px;
-        font-size: 61px;
       }
     }
   }
@@ -324,7 +208,6 @@
     &.second{
       top: 35%;
       left: 8%;
-      a{ color: #005955;}
       p{
         bottom: -20px;
         right: 50%;
@@ -336,7 +219,6 @@
       top: 55%;
       right: 8%;
       
-      a{color: #E3919A;}
       p{
         bottom: -30px;
         right: -10px;
@@ -346,7 +228,6 @@
     &.fourth{
       top: 80%;
       left: 5%;
-      a{ color: #000;}
       p{
         top: -10px;
         right: -5px;
