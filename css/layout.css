@@ -53,6 +53,7 @@
 header {
   color: #fff;
   font-family: "Kenoky", "Noto Sans KR", sans-serif;
+  height: 100px;
 }
 header .logo {
   position: fixed;
@@ -73,14 +74,6 @@ header .meun li {
 }
 header.hide {
   display: none;
-}
-@media (max-width: 767px) {
-  header .meun {
-    right: 10px;
-  }
-  header .meun li {
-    width: 30px;
-  }
 }
 
 footer {

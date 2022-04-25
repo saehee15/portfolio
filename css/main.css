@@ -78,6 +78,20 @@ body {
 .about .img_container .click.active:active {
   transform: scale(0.9) rotate(0deg);
 }
+@media (max-width: 1024px) {
+  .about .title-box {
+    font-size: 35px;
+    margin-right: 10px;
+  }
+  .about .img_container {
+    width: 270px;
+    height: 270px;
+  }
+  .about .img_container .click {
+    width: 80px;
+    height: 80px;
+  }
+}
 @media (max-width: 767px) {
   .about {
     display: block;

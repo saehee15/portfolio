@@ -115,48 +115,6 @@ $(function () {
         stagger:0.2
     })
 
-
-
-    //txt
-    // const prdMotion = gsap.timeline({
-    //     defaults: {
-    //         duration: 5,
-    //     }
-    // })
-    // const prdTxt = new SplitType('.left .txt_hide h2', {
-    //     types: 'words, chars',
-    // });
-
-    // prdMotion.addLabel('m1')
-    //     .fromTo(prdTxt.chars, {
-    //         opacity: 0,
-    //         yPercent: 1
-    //     }, {
-    //         opacity: 1,
-    //         yPercent: 0,
-    //         stagger: 0.05
-    //     }, 'm1')
-    //     .fromTo('.txt_hide li',{
-    //         opacity: 0
-    //     }, {
-    //         opacity: 1
-    //     }, "m1+=0.5")
-  
-
-   
-    // gsap.fromTo(el,{
-    //     opacity:0,
-    //     filter: 'blur(30px)'
-    // },{
-    //     scrollTrigger:{
-    //         trigger:el,
-    //         start:"top 50%",
-    //         // markers: true
-    //     },
-    //     opacity: 1,
-    //     filter: 'blur(0px)'
-    // })
-
     //work
     gsap.set('.work .card',{opacity: 0,filter: 'blur(30px)'})
     gsap.utils.toArray('.work .card').forEach(el => {
@@ -187,7 +145,7 @@ $(function () {
     var pathLength = path.getTotalLength();
 
     gsap.set('#line',{
-        strokeDasharray: pathLength + ' ' + pathLength,
+        strokeDasharray: pathLength + " " + pathLength,
         strokeDashoffset: pathLength,
     })
 
@@ -196,41 +154,12 @@ $(function () {
         scrollTrigger:{
             trigger:'.work',
             start:"top 70%",
-            // end:"+=300%",
             end:"bottom bottom",
             scrub:1,
-            // markers:true,
         },
         strokeDasharray: pathLength + pathLength,
         ease:'none',
-        // strokeDashoffset: pathLength,
+        strokeDashoffset: pathLength,
     })
-
-    // var path = document.querySelector('#line');
-    // // Get length of path...
-    // var pathLength = path.getTotalLength();
-    
-    // console.log(pathLength);
-    
-    // // Make very long dashes (the length of the path itself)
-    // path.style.strokeDasharray = pathLength + ' ' + pathLength ;
-    
-    // // Offset the dashes so the it appears hidden entirely
-    // path.style.strokeDashoffset = pathLength;
-    
-    // // When the page scrolls...
-    // window.addEventListener("scroll", function(e) {
-     
-    //   // What % down is it? 
-    //   var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-        
-    //   // Length to offset the dashes
-    //   var drawLength = pathLength  * scrollPercentage;
-      
-    //   // Draw in reverse
-    //   path.style.strokeDashoffset = pathLength - drawLength;
-      
-    // });
-
 
 })

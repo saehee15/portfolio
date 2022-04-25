@@ -57,6 +57,7 @@
 header {
         color: #fff;
         font-family: $font-en;
+        height: 100px;
     
         .logo {
             position: fixed;
@@ -81,14 +82,6 @@ header {
         &.hide {
             display: none;
         }
-        @include mobile{
-        .meun{
-            right: 10px;
-            li{
-                width: 30px;
-            }
-        }
-    };
 }
     
 footer {
