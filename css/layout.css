@@ -41,6 +41,14 @@
   font-size: 40px;
   font-family: "Kenoky", "Noto Sans KR", sans-serif;
 }
+@media (max-width: 767px) {
+  .loading .txt_wrap .count {
+    font-size: 50px;
+  }
+  .loading .txt_wrap .txt {
+    font-size: 30px;
+  }
+}
 
 header {
   color: #fff;
@@ -65,6 +73,14 @@ header .meun li {
 }
 header.hide {
   display: none;
+}
+@media (max-width: 767px) {
+  header .meun {
+    right: 10px;
+  }
+  header .meun li {
+    width: 30px;
+  }
 }
 
 footer {

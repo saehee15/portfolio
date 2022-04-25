@@ -18,10 +18,11 @@ body{
   justify-content: center;
   align-items: center;
   text-align: center;
+  
  
 
   .title-box{
-    font-size: 3vw;
+    font-size: 50px;
     line-height: 1.5;
     margin-right: 30px;
     padding-top: 100px;
@@ -95,7 +96,24 @@ body{
   }
 
   @include mobile{
-    height: 1300px;
+    display: block;
+    .title-box{
+      font-size: 30px;
+      padding-top: 180px;
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    .img_container{
+      width: 270px;
+      height: 270px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+       .click{
+         width: 80px;
+         height: 80px;
+       }
+    }
 }
 
 }
@@ -208,7 +226,7 @@ body{
       }
     }
     &.fourth{
-      top: 75%;
+      top: 71%;
       left: 20%;
       h3{
         top: -10px;
@@ -220,15 +238,23 @@ body{
     .card{
       width: 300px;
       height: 300px;
+      
+      h3{
+        font-size: 55px;
+      }
     }
   }
 
 @include mobile{
-  height: 1800px;
-
+  height: 350vh;
   .card{
     width: 270px;
     height: 270px;
+
+    h3{
+      font-size: 40px;
+    }
+
     &.first{
       top: 8%;
       right: 17%;
@@ -236,17 +262,15 @@ body{
       p{
         bottom: -50px;
         left: 10px;
-        font-size: 50px;
       }
 
     }
     &.second{
-      top: 35%;
+      top: 32%;
       left: 8%;
       p{
         bottom: -20px;
         right: 50%;
-        font-size: 50px;
       }
 
     }
@@ -257,7 +281,6 @@ body{
       p{
         bottom: -30px;
         right: -10px;
-        font-size: 50px;
       }
     }
     &.fourth{
@@ -266,7 +289,6 @@ body{
       p{
         top: -10px;
         right: -5px;
-        font-size: 50px;
       }
     }
   }

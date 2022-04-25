@@ -47,6 +47,12 @@
         font-family: $font-en;
     }
 }
+@include mobile{
+    .txt_wrap{
+        .count{ font-size: 50px;}
+        .txt{font-size: 30px;}
+    }
+}
 }
 header {
         color: #fff;
@@ -75,6 +81,14 @@ header {
         &.hide {
             display: none;
         }
+        @include mobile{
+        .meun{
+            right: 10px;
+            li{
+                width: 30px;
+            }
+        }
+    };
 }
     
 footer {
