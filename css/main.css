@@ -1,8 +1,4 @@
 @import url("./fonts.css");
-.txt_hide {
-  overflow: hidden;
-}
-
 .about {
   height: 100vh;
   background-color: #283f38;
@@ -18,6 +14,8 @@
 .about .title-box {
   font-size: 3vw;
   line-height: 1.5;
+  margin-right: 30px;
+  padding-top: 100px;
 }
 .about .title-box span {
   display: block;
@@ -27,12 +25,55 @@
   opacity: 1;
 }
 .about .img_container {
+  position: relative;
   width: 350px;
   height: 350px;
 }
 .about .img_container img {
   width: 100%;
   height: 100%;
+}
+.about .img_container .click {
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+}
+.about .img_container .click.active {
+  position: absolute;
+  z-index: 10;
+  bottom: -30px;
+  right: -30px;
+  transform: rotate(20deg) scale(1);
+  transition: transform 0.2s;
+  background: #cabbab;
+  box-shadow: 0 10px 20px -6px #cabbab;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+}
+.about .img_container .click.active:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: scale(1.2);
+  transition: transform 0.4s;
+}
+.about .img_container .click.active:hover:before {
+  transform: scale(1);
+}
+.about .img_container .click.active:active {
+  transform: scale(0.9) rotate(0deg);
 }
 @media (max-width: 767px) {
   .about {
@@ -45,7 +86,7 @@
   width: 100%;
   background-color: #283f38;
   position: relative;
-  padding: 200px 0;
+  padding: 200px 0px;
 }
 .work::before {
   content: "";
@@ -70,7 +111,7 @@
   opacity: 1;
 }
 .work .card .btn_area {
-  margin-top: 80px;
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -98,7 +139,6 @@
   width: 20px;
   height: 20px;
   background: url(../img/github_logo.png) center/100% no-repeat;
-  color: #fff;
   vertical-align: top;
   margin: -3px 10px 0 0;
 }
@@ -107,20 +147,11 @@
   z-index: 10;
   font-family: "Montserrat", sans-serif;
   color: #fff;
-  font-size: 61px;
-}
-.work .card:hover img {
-  opacity: 0.9;
-}
-.work .card:hover a {
-  opacity: 0.9;
-}
-.work .card:hover p {
-  opacity: 0;
+  font-size: 60px;
 }
 .work .card.first {
   top: 8%;
-  right: 17%;
+  right: 20%;
 }
 .work .card.first h3 {
   bottom: -50px;
@@ -132,10 +163,10 @@
 }
 .work .card.second h3 {
   bottom: -20px;
-  right: 50%;
+  left: -20px;
 }
 .work .card.third {
-  top: 55%;
+  top: 50%;
   right: 8%;
 }
 .work .card.third h3 {
@@ -159,9 +190,6 @@
 @media (max-width: 767px) {
   .work {
     height: 1800px;
-  }
-  .work svg path {
-    stroke-width: 400px;
   }
   .work .card {
     width: 270px;

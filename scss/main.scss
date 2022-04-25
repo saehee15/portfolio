@@ -3,13 +3,13 @@
 
 @import url('./fonts.css');
 
-.txt_hide {
-  overflow: hidden;
+body{
+  background-color: $bg_green;
 }
+
 
 .about {
   height: 100vh;
-  background-color: $bg_green;
   font-weight: 500px;
   color: #fff;
   position: relative;
@@ -23,6 +23,8 @@
   .title-box{
     font-size: 3vw;
     line-height: 1.5;
+    margin-right: 30px;
+    padding-top: 100px;
     span{
       display: block;
       opacity: 0;
@@ -32,11 +34,60 @@
     }
   }
   .img_container{
+    position: relative;
     width: 350px;
     height: 350px;
     img{
       width: 100%;
       height: 100%;
+    }
+    .click {
+      z-index: 1;
+      width: 100px;
+      height: 100px;
+
+      &.active {
+        position: absolute;
+        z-index: 10;
+        bottom: -30px;
+        right: -30px;
+        transform: rotate(20deg) scale(1);
+        transition: transform .2s;
+        background: $bg_gray;
+        box-shadow: 0 10px 20px -6px $bg_gray;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        cursor: pointer;
+        overflow: hidden;
+
+        &:before {
+          content: '';
+          position: absolute;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          box-shadow: inset 0 0 0 10px #ffffff33;
+          border-radius: 50%;
+          transform: scale(1.2);
+          transition: transform .4s;
+        }
+
+        &:hover {
+          &:before {
+            transform: scale(1);
+          }
+        }
+
+        &:active {
+          transform: scale(0.9) rotate(0deg);
+        }
+      }
     }
   }
  
@@ -52,9 +103,8 @@
 .work {
   height: 280vh;
   width: 100%;
-  background-color: $bg_green;
   position: relative;
-  padding: 200px 0;
+  padding: 200px 0px;
 
   &::before{
     content: "";
@@ -82,7 +132,7 @@
       opacity: 1;
     }
     .btn_area{
-      margin-top: 80px;
+      margin-top: 70px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -113,7 +163,6 @@
             width: 20px;
             height: 20px;
             background: url(../img/github_logo.png) center/100% no-repeat;
-           color: #fff;
             vertical-align: top;
             margin: -3px 10px 0 0;
           }
@@ -126,23 +175,13 @@
       z-index: 10;
       font-family: $font-en2;
       color: #fff;
-      font-size: 61px;
+      font-size: 60px;
     }
-    &:hover{
-      img{
-        opacity: 0.9;
-      }
-      a{
-        opacity: 0.9;
-      }
-      p{
-        opacity: 0;
-      }
-    }
+
 
     &.first{
       top: 8%;
-      right: 17%;
+      right: 20%;
 
       h3{
         bottom: -50px;
@@ -155,12 +194,12 @@
       left: 8%;
       h3{
         bottom: -20px;
-        right: 50%;
+        left: -20px;
       }
 
     }
     &.third{
-      top: 55%;
+      top: 50%;
       right: 8%;
       
       h3{
@@ -186,11 +225,7 @@
 
 @include mobile{
   height: 1800px;
-  svg{
-    path{
-      stroke-width: 400px
-    }
-  }
+
   .card{
     width: 270px;
     height: 270px;
