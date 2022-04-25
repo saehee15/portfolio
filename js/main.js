@@ -42,7 +42,6 @@ $(function () {
         }
     });
 
-    
 
     //about
     $('.link-target').click(function(e){

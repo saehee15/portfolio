@@ -72,8 +72,18 @@ header .meun li {
   width: 50px;
   margin-right: 10px;
 }
-header.hide {
+header .meun.hide {
   display: none;
+}
+@media (max-width: 1024px) {
+  header .meun {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .meun {
+    display: none;
+  }
 }
 
 footer {
@@ -108,24 +118,16 @@ footer .contact .sns a::before {
   vertical-align: top;
 }
 footer .up_btn {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   right: 40px;
   bottom: 40px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   z-index: 10;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s 0.4s;
   font-family: "Montserrat", sans-serif;
-}
-footer .up_btn img {
-  width: 35px;
-  margin-bottom: 10px;
+  color: #fff;
 }
 footer .up_btn.on {
   opacity: 1;

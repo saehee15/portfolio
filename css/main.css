@@ -227,6 +227,9 @@ body {
   .work {
     height: 350vh;
   }
+  .work svg {
+    display: none;
+  }
   .work .card {
     width: 270px;
     height: 270px;
@@ -243,7 +246,7 @@ body {
     left: 10px;
   }
   .work .card.second {
-    top: 32%;
+    top: 30%;
     left: 8%;
   }
   .work .card.second p {
@@ -251,7 +254,7 @@ body {
     right: 50%;
   }
   .work .card.third {
-    top: 55%;
+    top: 52%;
     right: 8%;
   }
   .work .card.third p {
@@ -259,7 +262,7 @@ body {
     right: -10px;
   }
   .work .card.fourth {
-    top: 80%;
+    top: 75%;
     left: 5%;
   }
   .work .card.fourth p {

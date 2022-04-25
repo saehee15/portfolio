@@ -259,6 +259,9 @@ body{
 
 @include mobile{
   height: 350vh;
+  svg{
+    display: none;
+  }
   .card{
     width: 270px;
     height: 270px;
@@ -278,7 +281,7 @@ body{
 
     }
     &.second{
-      top: 32%;
+      top: 30%;
       left: 8%;
       p{
         bottom: -20px;
@@ -287,7 +290,7 @@ body{
 
     }
     &.third{
-      top: 55%;
+      top: 52%;
       right: 8%;
       
       p{
@@ -296,7 +299,7 @@ body{
       }
     }
     &.fourth{
-      top: 80%;
+      top: 75%;
       left: 5%;
       p{
         top: -10px;
